@@ -29,10 +29,10 @@
 
 ## Phase 3 — Configuration & CLI Experience
 
-- [ ] Task 3.1: Parse `storyteller.yaml`, hydrate defaults for models, gating, mutation budgets.
-- [ ] Task 3.2: Implement CLI argument parsing and validation matching contract in PLAN.
-- [ ] Task 3.3: Surface configuration + CLI inputs into orchestrator invocation.
-- [ ] Task 3.4: Write user-facing docs for CLI usage and config overrides.
-- **Exit criteria:** `storyteller rewrite` runs locally end-to-end in plan mode using real config; documentation covers setup and CLI flags.
+- [x] Task 3.1: Parse `storyteller.yaml`, hydrate defaults for models, gating, mutation budgets.
+- [x] Task 3.2: Implement CLI argument parsing and validation matching contract in PLAN.
+- [x] Task 3.3: Surface configuration + CLI inputs into orchestrator invocation.
+- [x] Task 3.4: Write user-facing docs for CLI usage and config overrides.
+- **Exit criteria:** `storyteller rewrite` runs locally end-to-end in plan mode using real config; documentation covers setup and CLI flags. _Completed 2025-02-14_
 
 _Later phases (end-to-end runs, apply mode, stacking, mutation-test automation) will be detailed after Phase 1 review._

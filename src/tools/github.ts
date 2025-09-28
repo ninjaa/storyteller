@@ -399,7 +399,14 @@ function hasLogin(value: unknown): value is { login: string } {
 }
 
 function normalizeFileStatus(status?: string): FileSummary['status'] {
-  const allowed: FileSummary['status'][] = ['added', 'removed', 'modified', 'renamed', 'copied', 'changed'];
+  const allowed: FileSummary['status'][] = [
+    'added',
+    'removed',
+    'modified',
+    'renamed',
+    'copied',
+    'changed',
+  ];
   if (status && allowed.includes(status as FileSummary['status'])) {
     return status as FileSummary['status'];
   }

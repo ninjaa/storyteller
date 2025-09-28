@@ -241,9 +241,10 @@ function isNamedClass(
   return isClassDeclaration(node) && node.id !== null;
 }
 
-function isNamedInterfaceOrAlias(
-  node: TSESTree.Node,
-): node is (TSESTree.TSInterfaceDeclaration | TSESTree.TSTypeAliasDeclaration) & {
+function isNamedInterfaceOrAlias(node: TSESTree.Node): node is (
+  | TSESTree.TSInterfaceDeclaration
+  | TSESTree.TSTypeAliasDeclaration
+) & {
   id: TSESTree.Identifier;
 } {
   return isInterfaceDeclaration(node) || isTypeAliasDeclaration(node);

@@ -21,11 +21,11 @@
 
 ## Phase 2 — Orchestrator & Agent Wiring
 
-- [ ] Task 2.1: Flesh out `src/orchestrator.ts` to instantiate Director and specialist agents with system prompts.
-- [ ] Task 2.2: Register agents-as-tools and connect adapters per Agents SDK requirements.
-- [ ] Task 2.3: Implement workflow sequencing (plan/apply modes, stack flag handling, gating against QA critic output).
-- [ ] Task 2.4: Capture artifacts/logging per job ID for observability hooks.
-- **Exit criteria:** CLI can invoke `rewrite` in `plan` mode with mocked tool responses; workflow produces structured plan JSON without executing repo mutations.
+- [x] Task 2.1: Flesh out `src/orchestrator.ts` to instantiate Director and specialist agents with system prompts.
+- [x] Task 2.2: Register agents-as-tools and connect adapters per Agents SDK requirements.
+- [x] Task 2.3: Implement workflow sequencing (plan/apply modes, stack flag handling, gating against QA critic output).
+- [x] Task 2.4: Capture artifacts/logging per job ID for observability hooks.
+- **Exit criteria:** CLI can invoke `rewrite` in `plan` mode with mocked tool responses; workflow produces structured plan JSON without executing repo mutations. _Completed 2025-02-14_
 
 ## Phase 3 — Configuration & CLI Experience
 

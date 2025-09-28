@@ -33,10 +33,31 @@ Rewrites PRs to make them easy to read – powered by GPT-5-Codex.
 - `npm test` – Executes Vitest (currently stubbed).
 - `npm run test:coverage` – Runs tests with V8 coverage output.
 
+## Orchestrator (Plan Mode)
+
+Storyteller’s orchestrator is exposed via the `rewritePR` helper:
+
+```ts
+import { rewritePR } from './src/orchestrator.js';
+
+const result = await rewritePR({
+  jobId: 'local-dev',
+  repo: 'acme/example',
+  pr: 123,
+  mode: 'plan',
+  stack: false,
+});
+
+console.log(result.plan.atomicPlan.steps);
+```
+
+By default it wires the concrete tool adapters; tests inject mocks through the optional `dependencies` override to exercise the pipeline without touching live infrastructure.
+
 ## Project Layout
 
 - `PLAN.md` – Immutable product + architecture specification.
 - `ROADMAP.md` – Execution tracker for phases and tasks.
+- `src/orchestrator.ts` – Plan/apply coordinator assembling agents and tool adapters.
 - `src/` – TypeScript source (CLI entry point scaffolding in place).
 - `test/` – Test harness (empty placeholder for now).
 

@@ -10,3 +10,4 @@ export { FormatLintAdapter, formatLint } from './tools/formatLint.js';
 export { TestRunnerAdapter, testRunner } from './tools/testRunner.js';
 export { MutationTesterAdapter, mutationTester } from './tools/mutationTester.js';
 export * from './tools/types.js';
+export * from './orchestrator.js';

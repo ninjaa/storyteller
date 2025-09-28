@@ -50,6 +50,7 @@
     "@octokit/plugin-throttling": "^11.0.1",
     "@octokit/rest": "^22.0.0",
     "@typescript-eslint/typescript-estree": "^8.44.1",
+    "commander": "^14.0.1",
     "diff": "^8.0.2",
     "execa": "^9.6.0",
     "fast-glob": "^3.3.3",

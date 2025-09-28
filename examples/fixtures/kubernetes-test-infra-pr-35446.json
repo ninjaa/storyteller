@@ -1,0 +1,73 @@
+{
+  "pr": {
+    "number": 35446,
+    "title": "cleanup: remove genyaml pkg",
+    "state": "open",
+    "merged": false,
+    "head": { "ref": "cleanup/remove-genyaml", "sha": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeef" },
+    "base": { "ref": "master", "sha": "cafebabecafebabecafebabecafebabecafebabe" },
+    "author": { "login": "cblecker" },
+    "createdAt": "2024-01-10T12:30:00Z",
+    "updatedAt": "2024-01-12T08:45:00Z",
+    "draft": false,
+    "additions": 120,
+    "deletions": 1100,
+    "changedFiles": 42
+  },
+  "commits": [
+    {
+      "sha": "1111111",
+      "message": "cleanup: remove genyaml library",
+      "author": { "name": "Cole", "email": "cole@example.com", "login": "cblecker" },
+      "committedDate": "2024-01-10T12:40:00Z"
+    },
+    {
+      "sha": "2222222",
+      "message": "cleanup: drop genyaml Bazel targets",
+      "author": { "name": "Cole", "email": "cole@example.com", "login": "cblecker" },
+      "committedDate": "2024-01-10T13:05:00Z"
+    },
+    {
+      "sha": "3333333",
+      "message": "build: remove genyaml references in presubmits",
+      "author": { "name": "Cole", "email": "cole@example.com", "login": "cblecker" },
+      "committedDate": "2024-01-11T09:10:00Z"
+    }
+  ],
+  "diffSummary": {
+    "additions": 120,
+    "deletions": 1100,
+    "filesChanged": 42
+  },
+  "ci": {
+    "checks": [
+      { "name": "lint", "status": "completed", "conclusion": "success" },
+      { "name": "test", "status": "completed", "conclusion": "success" }
+    ]
+  },
+  "files": [
+    { "filename": "genyaml/BUILD", "status": "removed", "additions": 0, "deletions": 60, "changes": 60 },
+    { "filename": "genyaml/README.md", "status": "removed", "additions": 0, "deletions": 45, "changes": 45 },
+    { "filename": "prow/config.yaml", "status": "modified", "additions": 6, "deletions": 20, "changes": 26 },
+    { "filename": "images/builder/Dockerfile", "status": "modified", "additions": 4, "deletions": 8, "changes": 12 },
+    { "filename": "hack/update-generated.sh", "status": "modified", "additions": 8, "deletions": 3, "changes": 11 },
+    { "filename": "cmd/genyaml/main.go", "status": "removed", "additions": 0, "deletions": 220, "changes": 220 },
+    { "filename": "cmd/genyaml/helpers.go", "status": "removed", "additions": 0, "deletions": 95, "changes": 95 },
+    { "filename": "cmd/genyaml/helpers_test.go", "status": "removed", "additions": 0, "deletions": 80, "changes": 80 },
+    { "filename": "pkg/testgrid/config/config.go", "status": "modified", "additions": 40, "deletions": 50, "changes": 90 },
+    { "filename": "pkg/testgrid/config/validator.go", "status": "modified", "additions": 20, "deletions": 30, "changes": 50 },
+    { "filename": "pkg/testgrid/config/validator_test.go", "status": "modified", "additions": 18, "deletions": 14, "changes": 32 },
+    { "filename": "pkg/testgrid/config/updater.go", "status": "modified", "additions": 15, "deletions": 18, "changes": 33 },
+    { "filename": "pkg/testgrid/tabs/sorter.go", "status": "modified", "additions": 5, "deletions": 4, "changes": 9 },
+    { "filename": "pkg/testgrid/tabs/sorter_test.go", "status": "modified", "additions": 6, "deletions": 6, "changes": 12 },
+    { "filename": "pkg/prowjobs/prowjobs.go", "status": "modified", "additions": 8, "deletions": 12, "changes": 20 },
+    { "filename": "pkg/prowjobs/prowjobs_test.go", "status": "modified", "additions": 9, "deletions": 10, "changes": 19 },
+    { "filename": "pkg/coverage/report.go", "status": "modified", "additions": 6, "deletions": 7, "changes": 13 },
+    { "filename": "pkg/coverage/report_test.go", "status": "modified", "additions": 4, "deletions": 4, "changes": 8 },
+    { "filename": "pkg/prowjobgen/main.go", "status": "modified", "additions": 2, "deletions": 3, "changes": 5 },
+    { "filename": "pkg/prowjobgen/testdata/job.yaml", "status": "modified", "additions": 3, "deletions": 3, "changes": 6 }
+  ],
+  "languages": ["go", "yaml", "dockerfile"],
+  "testCommands": ["bazel test //..."],
+  "repoPaths": { "workdir": null }
+}

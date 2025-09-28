@@ -504,7 +504,9 @@ const defaultRunner: RunnerAgent = (plan) => {
 const defaultCritic: CriticAgent = (context, atomicPlan, testPlan) => {
   const largeChange = context.diffSummary.filesChanged > 40;
   const hasTests = Boolean(testPlan.acceptance.length);
-  const reviewabilityScore = largeChange ? 4 : 5;
+  const touchesMultipleSubsystems = atomicPlan.steps.length > 4;
+  const mostlyDeletions = context.diffSummary.deletions > context.diffSummary.additions * 3;
+  const reviewabilityScore = largeChange && touchesMultipleSubsystems ? 4 : 5;
 
   const scores = {
     atomicity: Math.min(5, Math.max(3, atomicPlan.steps.length >= 1 ? 4 : 3)),
@@ -522,7 +524,10 @@ const defaultCritic: CriticAgent = (context, atomicPlan, testPlan) => {
       scores.reviewability >= 4 &&
       scores.literate >= 4 &&
       scores.tests >= 4,
-    notes: largeChange ? ['Consider stacking due to changed file count.'] : [],
+    notes:
+      largeChange && touchesMultipleSubsystems && !mostlyDeletions
+        ? ['Consider stacking due to breadth of changes across subsystems.']
+        : [],
   };
 };
 

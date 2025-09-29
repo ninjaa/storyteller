@@ -1,5 +1,9 @@
 # Storyteller
 
+<p align="center">
+  <img src="assets/logo.png" alt="Storyteller logo" width="200" />
+</p>
+
 A multi-agent refactoring crew that converts gnarly pull requests into reviewer-friendly story arcs. Give it a repo and a PR number; it ingests the history, prunes dead ends, decomposes the change into atomic commits, writes tests, and hands back a literate plan (or a stack of PRs) ready for review.
 
 ## Quickstart

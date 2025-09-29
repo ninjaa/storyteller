@@ -17,3 +17,7 @@ npx storyteller rewrite --repo your-org/your-repo --pr 123 --mode plan
 - Phase 4: 🚧 Apply-mode, CI orchestration, stacked publishing
 
 For the full spec, roadmap, and example outputs, see `PLAN.md`, `ROADMAP.md`, and `examples/`.
+
+## Feedback
+
+It's too early for me to allow people to open Github Issues. If you want to chat, DM me on X, my handle is [@aditya_advani](https://x.com/aditya_advani)
